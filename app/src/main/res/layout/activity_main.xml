@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:background="@drawable/round_corners">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.1" />
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/hi"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nasabah"
+                    android:textColor="@color/black"
+                    android:textSize="32dp"
+                    app:layout_constraintStart_toStartOf="@id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+                <RelativeLayout
+                    android:layout_width="380dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_square"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+                <TextView
+                    android:id="@+id/mypoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="@string/mypoin"
+                    android:textColor="@color/white"
+                    android:textSize="32dp"
+                    app:layout_constraintStart_toStartOf="@id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+                <TextView
+                    android:id="@+id/balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/angka"
+                    android:textColor="@color/white"
+                    android:textSize="32dp"
+                    app:layout_constraintStart_toEndOf="@+id/mypoin"
+                    app:layout_constraintTop_toBottomOf="@+id/nama" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <!-- Main Content -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="225dp">
+
+            <ImageButton
+                android:id="@+id/riwayat"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="40dp"
+                android:contentDescription="@string/transaksi"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/transaksi_svg" />
+
+            <TextView
+                android:id="@+id/riwayat_text"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/transaksi"
+                android:textAlignment="center"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/riwayat" />
+
+            <ImageButton
+                android:id="@+id/harga"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="48dp"
+                android:contentDescription="@string/harga"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/harga_svg" />
+
+            <TextView
+                android:id="@+id/harga_text"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="48dp"
+                android:text="@string/harga"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/harga" />
+
+            <ImageButton
+                android:id="@+id/tukar"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginLeft="48dp"
+                android:contentDescription="@string/tukar"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/riwayat_text"
+                app:srcCompat="@drawable/tukar_poin_svg" />
+
+            <TextView
+                android:id="@+id/tukar_text"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tukar"
+                android:textAlignment="center"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tukar" />
+
+            <ImageButton
+                android:id="@+id/lokasi"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="48dp"
+                android:contentDescription="@string/lokasi"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/harga_text"
+                app:srcCompat="@drawable/lokasi_svg" />
+
+            <TextView
+                android:id="@+id/lokasi_text"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:text="@string/lokasi"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lokasi" />
+
+            <Button
+                android:id="@+id/button_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Logout"
+                android:backgroundTint="@color/basic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

@@ -12,22 +12,4 @@
         android:layout_height="match_parent"
         android:id="@+id/riwayat"/>
 
-<!--    <com.google.android.material.appbar.AppBarLayout-->
-<!--        android:id="@+id/appBarLayout2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="@color/basic"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--        <com.google.android.material.appbar.MaterialToolbar-->
-<!--            android:id="@+id/topAppBar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="?attr/actionBarSize"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:menu="@menu/option_menu"-->
-<!--            app:title="@string/app_name"-->
-<!--            app:titleTextColor="@color/white" />-->
-<!--    </com.google.android.material.appbar.AppBarLayout>-->
-
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
